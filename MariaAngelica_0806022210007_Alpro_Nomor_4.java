@@ -3,25 +3,26 @@ import java.util.Scanner;
 public class MariaAngelica_0806022210007_Alpro_Nomor_4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        float TotalJamKerja, GajiKotor = 0, Pajak = 0, GajiBersih, GajiA;
+        float totalJamKerja, gajiKotor, pajak, gajiBersih, gajiA;
+
         System.out.println("Total jam kerja: ");
-        TotalJamKerja = input.nextFloat();
-        if (TotalJamKerja > 40) {
-            GajiA = TotalJamKerja - 40;
-            GajiKotor = 40 * 6 + GajiA * 9;
-            System.out.println("Gaji Kotor: " + GajiKotor);
+        totalJamKerja = input.nextFloat();
+        if (totalJamKerja > 40) {
+            gajiA = totalJamKerja- 40;
+            gajiKotor= 40 * 6 + gajiA * 9;
+            System.out.println("Gaji Kotor: " + gajiKotor);
         } else {
-            GajiKotor = TotalJamKerja * 6;
-            System.out.println("Gaji Kotor: " + GajiKotor);
+            gajiKotor = totalJamKerja * 6;
+            System.out.println("Gaji Kotor: " + gajiKotor);
         }
-        if (GajiKotor >= 250) {
-            Pajak = (float) (GajiKotor * 0.12);
-            System.out.println("Pajak: " + Pajak);
+        if (gajiKotor >= 250) {
+            pajak = (float) (gajiKotor * 0.12); // casting mengubah nilai double ke dalam float
+            System.out.println("Pajak: " + pajak);
         } else {
-            Pajak = (float) (GajiKotor * 0.1);
-            System.out.println("Pajak: " + Pajak);
+            pajak = (float) (gajiKotor * 0.1);
+            System.out.println("Pajak: " + pajak);
         }
-        GajiBersih = GajiKotor - Pajak;
-        System.out.println("Gaji Bersih: " + GajiBersih);
+        gajiBersih = gajiKotor - pajak;
+        System.out.println("Gaji Bersih: " + gajiBersih);
     }
 }
